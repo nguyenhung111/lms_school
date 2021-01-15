@@ -159,7 +159,6 @@ class _HomeState extends State<Home> {
                           ],
                         ))
                     : Container(
-                        color: Colors.white,
                         height: 70,
                         width: MediaQuery.of(context).size.width * 0.9,
                         margin: EdgeInsets.all(10),

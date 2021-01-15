@@ -33,7 +33,15 @@ class _LichhocState extends State<Lichhoc> {
                 child: Row(
                   children: [
                     Text(
-                      "Thứ 5, ngày 10 tháng 12 năm 2020",
+                      'Thứ ' +
+                          DateTime.now().weekday.toString() +
+                          ',' +
+                          ' ngày ' +
+                          DateTime.now().day.toString() +
+                          ' tháng ' +
+                          DateTime.now().month.toString() +
+                          ' năm ' +
+                          DateTime.now().year.toString(),
                       style:
                       TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
