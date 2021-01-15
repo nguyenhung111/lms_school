@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lms_school_v2/login/Dangnhap.dart';
 import 'SliderModel.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -40,7 +41,7 @@ class _HomeState extends State<Home> {
         child: Scaffold(
           backgroundColor: Colors.white,
           body: Container(
-            width:MediaQuery.of(context).size.width*1 ,
+            width: MediaQuery.of(context).size.width * 1,
             height: MediaQuery.of(context).size.height * 1,
             child: PageView(
               controller: controller,
@@ -51,7 +52,7 @@ class _HomeState extends State<Home> {
               },
               children: <Widget>[
                 Column(
-                  children:<Widget> [
+                  children: <Widget>[
                     SlideTile(
                       imagePath: mySLides[0].getImageAssetPath(),
                     ),
@@ -90,14 +91,14 @@ class _HomeState extends State<Home> {
                   ],
                 ),
                 Column(
-                  children:<Widget> [
+                  children: <Widget>[
                     SlideTile(
                       imagePath: mySLides[1].getImageAssetPath(),
                     ),
                     const Text.rich(
                       TextSpan(
                         text:
-                        'Hoặc liên hệ với giáo viên phụ trách để được \n\t\t\t\t\t\t\t\t\t\t\t\t cấp',
+                            'Hoặc liên hệ với giáo viên phụ trách để được \n\t\t\t\t\t\t\t\t\t\t\t\t cấp',
                         children: <TextSpan>[
                           TextSpan(
                               text: ' tài khoản ',
@@ -107,7 +108,8 @@ class _HomeState extends State<Home> {
                               text: ' mật khẩu',
                               style: TextStyle(height: 1.5, color: Colors.red)),
                         ],
-                        style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                            fontSize: 13, fontWeight: FontWeight.w600),
                       ),
                     ),
                   ],
@@ -122,6 +124,7 @@ class _HomeState extends State<Home> {
                 slideIndex != 1
                     ? Container(
                         width: MediaQuery.of(context).size.width * 0.9,
+                        height: 70,
                         margin: EdgeInsets.all(10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -156,6 +159,7 @@ class _HomeState extends State<Home> {
                           ],
                         ))
                     : Container(
+                        height: 70,
                         width: MediaQuery.of(context).size.width * 0.9,
                         margin: EdgeInsets.all(10),
                         child: Row(
